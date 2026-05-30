@@ -1,0 +1,18 @@
+services:
+    - type: cron
+    name: xauusd-signal-bot
+    env: python
+    schedule: "*/5 * * * *"
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+            - key: OANDA_API_KEY
+        sync: false
+            - key: OANDA_ACCOUNT_ID
+        sync: false
+            - key: COMPOSIO_API_KEY
+        sync: false
+            - key: TELEGRAM_CHAT_ID
+        sync: false
+            - key: ALERT_EMAIL
+        sync: false
