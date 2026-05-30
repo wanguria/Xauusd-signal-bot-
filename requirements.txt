@@ -1,0 +1,5 @@
+composio-core
+pandas
+numpy
+ta
+requests
